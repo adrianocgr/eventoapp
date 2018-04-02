@@ -1,11 +1,16 @@
 package com.eventoapp.model;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
 @Table(name="TB_EVENTO")
 public class Evento {
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long idEvento;
 	private String nome;
 	private String local;
